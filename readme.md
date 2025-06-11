@@ -26,9 +26,9 @@ Imagine you have a form element with the ID `"profile_form"` and you reference i
 self.assertEqual(driver.find_element(By.ID, "profile_form").is_displayed(), True)
 ```
 
-If an admin later changes the ID to `"profile"`, every test that references `"profile_form"` will break.
+If an `admin` later changes the ID to `"profile"`, every test that references `"profile_form"` will break.
 
-Now, you might be tempted to use your IDE's search-and-replace to update all instances. However, this is risky, especially if other elements or variable names also include the word `"profile"` — it can lead to unintended changes even within the Python files themselves, potentially causing bugs or breaking test logic.
+Now, you might be tempted to use your IDE's search-and-replace to update all instances. However, this is risky, especially if other elements or variable names also include the word `"profile"` — it can lead to unintended changes even within the Python files themselves if they have `"profile"` within them, potentially causing bugs or breaking test logic.
 
 To avoid this, selectors are stored in one place (the Page Elements module). Page Objects reference those selectors using **dot notation**, e.g.:
 
@@ -36,7 +36,8 @@ To avoid this, selectors are stored in one place (the Page Elements module). Pag
 PROFILE_FORM.NAME_ID
 ```
 
-If a selector changes, you only need to update it in the Page Elements file corresponding to page test — and all your tests will still work.
+If a selector changes, you only need to update it in the Page Elements file corresponding to page test — and all your tests will still work because you
+are not manipulating business/test logic.
 
 ---
 

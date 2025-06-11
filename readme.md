@@ -28,7 +28,7 @@ self.assertEqual(driver.find_element(By.ID, "profile_form").is_displayed(), True
 
 If an admin later changes the ID to `"profile"`, every test that references `"profile_form"` will break.
 
-Now, you might be tempted to use your IDE's search-and-replace to update all instances. However, this is risky, especially if other elements or variable names also include the word `"profile"` — However, this is risky, especially if other elements, variables, or strings include the word "profile" — it can lead to unintended changes even within the Python files themselves, potentially causing bugs or breaking test logic.
+Now, you might be tempted to use your IDE's search-and-replace to update all instances. However, this is risky, especially if other elements or variable names also include the word `"profile"` — it can lead to unintended changes even within the Python files themselves, potentially causing bugs or breaking test logic.
 
 To avoid this, selectors are stored in one place (the Page Elements module). Page Objects reference those selectors using **dot notation**, e.g.:
 

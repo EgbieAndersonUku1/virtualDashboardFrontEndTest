@@ -59,7 +59,7 @@ Follow the steps below to clone the repository, set up a virtual environment, in
 
 ```bash
 git clone https://github.com/EgbieAndersonUku1/virtualDashboardFrontEndTest.git .
-cd your-repo-name
+cd virtual_bank_frontend_tests
 ```
 
 #### 2. **Create and activate a virtual environment**

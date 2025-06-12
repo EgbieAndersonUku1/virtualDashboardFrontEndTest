@@ -50,6 +50,8 @@ class VirtualBankDashboardTest(TestCase):
         self._validate_select_value(self._form.select_signature_from_dropdown(self.signature), self.signature)
         self._validate_select_value(self._form.select_id_type_from_dropdown(self.id_type), self.id_type)
 
+        self._form.click_profile_save_button()
+        
         input("Press Enter in terminal to close the window...")
         
     def _validate_profile_form(self, element, expected_value):
